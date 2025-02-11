@@ -1,13 +1,23 @@
-import React from 'react'
+import {BrouserRouter, Routes, Router } from 'react-router-dom';
+import Header from './components/Header';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import About from './pages/About';
 
-function App() {
+export default function App() {
   return (
-    <h1 className="text-red-500">
-      Speke Estate
-    </h1>
-  )
+    <BrouserRouter>
+    <Header/>
+    <Router>
+      <Router path='/' element={<Home />} />\
+      <Router path='/sign-in' element={<SignIn />} />
+      <Router path='/sign-up' element={<SignUp />} />
+      <Router path='/about' element={<About />} />
+
+    </Router>
+    </BrouserRouter>
+
+      
+  );
 }
-
-export default App
-
 

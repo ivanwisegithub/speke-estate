@@ -2,4 +2,4 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 
-export default userSlice.reducer;
+export default userSlice.reducer
